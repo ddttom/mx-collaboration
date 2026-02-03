@@ -1,30 +1,26 @@
-# mx-collaboration
+# MX Collaboration
 
-## Overview
+This repository serves as a central hub for team collaboration, tracking documents from initial ideas to published content.
 
-[Project description goes here]
+## Workflow Overview
+
+We follow a staged approach to documentation:
+
+1. **Incoming**: Unstructured ideas and drafts.
+2. **Proposals**: Formalized ideas for review (using templates).
+3. **Accepted**: Approved proposals.
+4. **Published**: Final, authoritative content.
+
+We also maintain **Chats** for historical context of discussions.
 
 ## Getting Started
 
-### Prerequisites
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for detailed instructions on how to add and move documents through these stages.
 
-[List prerequisites]
+## Directory Structure
 
-### Installation
-
-```bash
-git clone https://github.com/ddttom/mx-collaboration.git
-cd mx-collaboration
-```
-
-## Usage
-
-[Usage instructions]
-
-## Contributing
-
-Contributions are welcome! Please read the contributing guidelines before submitting a pull request.
-
-## License
-
-[Specify license]
+- [`incoming/`](incoming/)
+- [`proposals/`](proposals/)
+- [`accepted/`](accepted/)
+- [`published/`](published/)
+- [`chats/`](chats/)
