@@ -24,3 +24,28 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for detailed instructions on how 
 - [`accepted/`](accepted/)
 - [`published/`](published/)
 - [`chats/`](chats/)
+
+## MX Compliance
+
+This repository follows MX (Machine Experience) principles for machine-readable metadata.
+
+### Folder Metadata
+
+Every directory contains a `.mx.yaml.md` file describing:
+- **Purpose**: What the folder is for
+- **Provenance**: Who created it and when
+- **Relationships**: How it relates to other folders
+- **AI Guidance**: Instructions for AI agents
+
+### Available Commands
+
+```bash
+npm run mx:generate        # Generate .mx.yaml.md for new folders
+npm run mx:validate        # Validate all metadata
+npm run mx:hooks:install   # Install validation hooks
+```
+
+### Learn More
+
+- [MX Principles](../../mx-principles.md)
+- [MX YAML Guide](../../docs/guides/for-humans/mx-yaml-md-guide.md)
