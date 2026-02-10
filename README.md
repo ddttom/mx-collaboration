@@ -3,7 +3,7 @@ title: "MX Collaboration"
 description: "Central hub for team collaboration, tracking documents from initial ideas to published content"
 author: Tom Cranstoun
 created: 2026-02-06
-modified: 2026-02-09
+modified: 2026-02-10
 version: "1.0"
 status: active
 ---
@@ -57,5 +57,5 @@ npm run mx:hooks:install   # Install validation hooks
 
 ### Learn More
 
-- [MX Principles](../../mx-principles.md)
+- [MX Principles](../../PRINCIPLES.md)
 - [MX YAML Guide](../../docs/guides/for-humans/mx-yaml-md-guide.md)
