@@ -64,7 +64,7 @@ Ideas that feed: **MX OS → The Gathering** (building the OS generates new stan
 **Status:** seed
 **Feeds:** MX OS → Gathering
 
-Every cog-wheel references `mx` commands (`mx install`, `mx cog registry`, `mx uber`). None of these commands exist as executable software yet. The cog-wheels are runbooks — AI agents execute them by reading the instructions. But a native `mx` CLI could make the same commands work without an AI agent.
+Every action-cog references `mx` commands (`mx install`, `mx cog registry`, `mx uber`). None of these commands exist as executable software yet. The action-cogs are runbooks — AI agents execute them by reading the instructions. But a native `mx` CLI could make the same commands work without an AI agent.
 
 Question: should `mx` be a shell tool, a Node.js tool, or should the runbook model be the only runtime? Building a CLI tool might violate "the AI agent IS the runtime."
 
@@ -101,12 +101,12 @@ The spec defines visibility levels (local, private, shared, hosted) but they are
 
 ---
 
-### IPC Between Cog-Wheels
+### IPC Between Action-Cogs
 
 **Status:** seed
 **Feeds:** MX OS
 
-Cog-wheels can invoke other cog-wheels (the `invokes` field). But there is no standard protocol for passing data between them. How does the output of one cog-wheel become the input of another? The asking-for-help cog documents agent-to-agent delegation, but the plumbing does not exist.
+Action-cogs can invoke other action-cogs (the `invokes` field). But there is no standard protocol for passing data between them. How does the output of one action-cog become the input of another? The asking-for-help cog documents agent-to-agent delegation, but the plumbing does not exist.
 
 ---
 
@@ -288,12 +288,12 @@ allabout.network is Tom's publishing platform. It needs a dedicated MX section �
 
 Ideas that feed multiple segments simultaneously.
 
-### Cog-Wheels as CMS Summit Demo Material
+### Action-Cogs as CMS Summit Demo Material
 
 **Status:** sprouting
 **Feeds:** MX OS → Company → Book
 
-The cog-wheels we have already built (installme-runner, script-helper, cog-registry) are live demo material. An AI agent reading a cog-wheel and executing it on stage demonstrates the entire MX OS model in sixty seconds.
+The action-cogs we have already built (installme-runner, script-helper, cog-registry) are live demo material. An AI agent reading an action-cog and executing it on stage demonstrates the entire MX OS model in sixty seconds.
 
 ---
 

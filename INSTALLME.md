@@ -76,6 +76,6 @@ Read SOUL.md first. Then CONTRIBUTING.md for the workflow.
 
 ## For AI Agents
 
-Read the YAML frontmatter above. It contains structured prerequisites, install steps, and verification criteria. Follow the installme-runner cog-wheel procedure if available, or execute the steps in order.
+Read the YAML frontmatter above. It contains structured prerequisites, install steps, and verification criteria. Follow the installme-runner action-cog procedure if available, or execute the steps in order.
 
 Stop guessing. Start reading.
