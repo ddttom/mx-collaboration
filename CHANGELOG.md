@@ -12,6 +12,14 @@ status: active
 
 All notable changes to this repository are documented in this file.
 
+## 2026-02-10 — Brainstorm Migration
+
+### Added
+
+- **incoming/brainstorm.md** — The idea garden, moved from repo root. Simplified frontmatter (info cog, no registry entry).
+
+---
+
 ## 2026-02-10 — MX OS Onboarding
 
 ### Added
