@@ -1,3 +1,13 @@
+---
+title: "Chat Log Template"
+description: "Template for recording discussion points, decisions, and action items from team conversations"
+author: Tom Cranstoun
+created: 2026-02-06
+modified: 2026-02-09
+version: "1.0"
+status: active
+---
+
 # Chat Log: [Topic/Date]
 
 **Date:** YYYY-MM-DD

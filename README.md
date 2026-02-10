@@ -1,3 +1,13 @@
+---
+title: "MX Collaboration"
+description: "Central hub for team collaboration, tracking documents from initial ideas to published content"
+author: Tom Cranstoun
+created: 2026-02-06
+modified: 2026-02-09
+version: "1.0"
+status: active
+---
+
 # MX Collaboration
 
 This repository serves as a central hub for team collaboration, tracking documents from initial ideas to published content.

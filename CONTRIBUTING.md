@@ -1,3 +1,13 @@
+---
+title: "Contributing to MX Collaboration"
+description: "Structured workflow guide for handling documents from initial ideas to final publication"
+author: Tom Cranstoun
+created: 2026-02-06
+modified: 2026-02-09
+version: "1.0"
+status: active
+---
+
 # Contributing to MX Collaboration
 
 This repository is designed to facilitate collaboration between team members. We use a structured workflow for handling documents from initial ideas to final publication.

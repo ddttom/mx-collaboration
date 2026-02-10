@@ -1,3 +1,13 @@
+---
+title: "Proposal Template"
+description: "Structured template for formalising proposals with background, problem, solution, and risk sections"
+author: Tom Cranstoun
+created: 2026-02-06
+modified: 2026-02-09
+version: "1.0"
+status: active
+---
+
 # Proposal Title
 
 **Author:** [Your Name]
