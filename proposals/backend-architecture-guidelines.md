@@ -1,10 +1,10 @@
 ---
-title: "Backend Architecture Guidelines"
-description: "Core principles for modular, thread-safe, multi-tenant backend architecture"
+title: Backend Architecture Guidelines
+description: Core principles for modular, thread-safe, multi-tenant backend architecture
 author: Tom Cranstoun
 created: 2025-12-15
-modified: 2026-02-10
-version: "1.0"
+modified: 2026-02-11
+version: 1.0
 status: proposal
 source: packages/notes/Vibe coding backend.md
 ---
@@ -15,13 +15,14 @@ source: packages/notes/Vibe coding backend.md
 
 ### Architecture Design
 
-Backend must be highly modular and communicate through a simple message queue with a structured message API. **Design the message API before implementing any backend code.**
+The backend must be highly modular and communicate via a simple message queue with a structured message API. **Design the message API before implementing any backend code.**
+easy 
 
 ### Code Requirements
 
 - All backend code must be **thread-safe**
 - All backend code must be **injection-proof**
-- Backend may share core library with frontend
+- Backend may share the core library with the frontend
 - Backend should be **multi-tenant** and **UI-agnostic**
 - Communication via message API with structured JSON
 
