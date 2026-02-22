@@ -4,14 +4,14 @@ description: "Add mobile hamburger menu and componentize hero/nav for cogify tem
 author: Tom Cranstoun
 created: 2026-02-22
 modified: 2026-02-22
-status: Draft
+status: Ready for Implementation
 version: "1.0"
 ---
 
 # Cogify Hamburger Component Proposal
 
 **Author:** Tom Cranstoun
-**Status:** Draft
+**Status:** Ready for Implementation
 **Date:** 2026-02-22
 
 ## Background
@@ -48,7 +48,7 @@ Cogify templates (`hub-content/mx-reference-implementations/_templates/`) simila
 
 ### Hamburger Menu Specification
 
-**Behavior:** Slide-in drawer from left
+**Behavior:** Slide-in drawer from right
 **Breakpoint:** 900px (match EDS header.js)
 **Features:**
 
@@ -57,7 +57,8 @@ Cogify templates (`hub-content/mx-reference-implementations/_templates/`) simila
 - Body scroll lock when open
 - Escape key closes drawer
 - Aria-expanded accessibility
-- Works with bilingual language toggle
+- Works with n-language selector (not limited to 2 languages)
+- Overlay click closes drawer
 
 ### Component Structure (Standalone Cogs)
 
@@ -117,19 +118,19 @@ function closeOnEscape(e) {
   .nav-sections {
     position: fixed;
     top: 0;
-    left: -100%;
+    right: -100%;
     width: 80%;
     max-width: 300px;
     height: 100vh;
     background: var(--background-color);
-    transition: left 0.3s ease;
+    transition: right 0.3s ease;
     z-index: 999;
     padding: 4rem 1rem 1rem;
     overflow-y: auto;
   }
 
   nav[aria-expanded="true"] .nav-sections {
-    left: 0;
+    right: 0;
   }
 
   /* Overlay */
@@ -159,7 +160,7 @@ function closeOnEscape(e) {
 - **No JS frameworks** — Vanilla JavaScript only
 - **Preserve visual design** — Existing styles unchanged
 - **Update templates** — Changes propagate to cogify templates
-- **Maintain bilingual** — Hamburger integrates with language toggle
+- **N-language support** — Language selector supports 2+ languages, not binary toggle
 - **EDS alignment** — Patterns adapted from allaboutv2/blocks/header/
 
 ## Risks and Downsides
@@ -180,23 +181,29 @@ function closeOnEscape(e) {
 2. **Web Components** — Rejected due to complexity for standalone cogs and desire for vanilla JS
 3. **Separate nav file includes** — Rejected to keep cogs self-contained
 
-## Open Questions
+## Open Questions — RESOLVED
 
-1. Should hamburger icon use SVG or CSS-only (like EDS)?
-2. Should drawer slide from left or right?
-3. Should language toggle button appear inside drawer on mobile?
-4. Should we create a shared `hamburger.js` utility that both patterns import?
+| Question | Decision | Rationale |
+|----------|----------|-----------|
+| 1. Hamburger icon style | **CSS-only** | Match EDS pattern — 3 lines via ::before/::after |
+| 2. Drawer slide direction | **Right** | Drawer slides from same side as hamburger button |
+| 3. Language toggle placement | **In drawer (mobile), menu (desktop)** | Responsive placement |
+| 4. Shared utility file | **No — inline per file** | Keep cogs self-contained |
+| 5. Overlay click behavior | **Yes — closes drawer** | Standard mobile UX |
+| 6. N-language support | **Required** | Language selector must support 2+ languages, not binary toggle |
 
 ## Success Criteria
 
-- [ ] Hamburger icon visible on mobile (< 900px)
-- [ ] Drawer slides in smoothly when clicked
+- [ ] Hamburger icon visible on mobile (< 900px), CSS-only
+- [ ] Drawer slides in from **right** smoothly (300ms)
 - [ ] Escape key closes drawer
+- [ ] **Overlay click** closes drawer
 - [ ] Body scroll locked when drawer open
-- [ ] Language toggle works within drawer
+- [ ] Language selector in drawer (mobile), menu (desktop)
+- [ ] **N-language support** (not limited to 2)
 - [ ] WCAG 2.1 AA accessibility maintained
 - [ ] Salva demo updated (es + en versions)
-- [ ] Cogify templates updated
+- [ ] Cogify templates updated (parallel implementation)
 - [ ] cogify-this.cog.md documents dual approach
 
 ## Next Steps
@@ -210,3 +217,4 @@ function closeOnEscape(e) {
 ---
 
 *Proposal generated from interview session 2026-02-22*
+*Open questions resolved via follow-up interview 2026-02-22*
