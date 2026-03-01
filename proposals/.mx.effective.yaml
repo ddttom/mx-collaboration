@@ -1,0 +1,33 @@
+# .mx.effective.yaml
+# Computed effective values with inheritance resolved
+# Generated automatically by mx-effective.js - DO NOT EDIT
+
+title: Proposals
+description: Proposals directory
+purpose: Organize proposals-related content
+created: 2026-02-03
+createdBy: Tom Cranstoun
+lastUpdated: 2026-02-05
+stability: stable
+status: active
+lifecycle: production
+folderType: content
+hasSubfolders: false
+inherits: ../.mx.yaml.md
+audience:
+  - humans
+  - machines
+primaryLanguages:
+  - markdown
+mx:
+  version: '1.0'
+  contentType: folder-metadata
+  domain: proposals
+  ai:
+    assistance: welcome
+    editable: true
+    generation:
+      allowed: true
+      review_required: true
+    contextProvides:
+      - Proposals context and structure

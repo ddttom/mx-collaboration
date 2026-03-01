@@ -1,0 +1,331 @@
+---
+title: "MX-Gathering: Next Steps and Deployment Tasks"
+author: "Tom Cranstoun"
+creation-date: "24/Jan/2026"
+last-updated: "25/Jan/2026"
+purpose: "Deployment checklist and configuration reminders for MX-Gathering infrastructure"
+visibility: "public"
+audience: "community-contributors"
+priority: "high"
+status: "pending-cloudflare-configuration"
+---
+
+📋 **STRATEGIC PLAN REFERENCE:** See ../../packages/bible/update plan.md for comprehensive MX-Bible 2026 roadmap covering:
+   - Core manuscript finalization
+   - Appendix K completion (MX Page Patterns)
+   - Agent Information Architecture chapter
+   - Metadata canon development
+   - Case studies & failure analyses
+   - Publication package preparation
+
+---
+
+# MX-Gathering Deployment TODO
+
+## Current Status
+
+✅ **COMPLETED:**
+- [x] Repository created (public, MIT licensed)
+- [x] Content structure established (events, discussions, contributors, members)
+- [x] Domain strategy documented
+- [x] Landing page created (WCAG 2.1 AA compliant)
+- [x] Branch strategy implemented (main/staging/dev)
+- [x] GitHub Actions CI/CD workflows configured
+- [x] Development environment documentation complete
+- [x] Developer quick start guide published
+
+## Next Steps (Priority Order)
+
+### 1. Configure Cloudflare Pages (CRITICAL - Do First)
+
+**Purpose:** Enable automated deployments for all environments
+
+**Actions Required:**
+1. Go to Cloudflare Pages Dashboard: https://dash.cloudflare.com/
+2. Click "Create a project" → "Connect to Git"
+3. Select repository: "Digital-Domain-Technologies-Ltd/MX-Gathering"
+4. Configure build settings:
+   - Framework preset: None (static HTML)
+   - Build command: (leave empty)
+   - Build output directory: `web`
+   - Root directory: (leave empty)
+5. Configure branch deployments:
+   - Production branch: `main`
+   - Preview branches: `staging`, `dev`, `feature/*`
+6. Save and deploy
+
+**Expected Result:**
+- main branch deploys to auto-generated URL (e.g., mx-gathering.pages.dev)
+- staging/dev branches create preview deployments
+- Every PR triggers preview deployment
+
+**Documentation Reference:** docs/development/ENVIRONMENTS.md (lines 165-214)
+
+---
+
+### 2. Configure Custom Domains in Cloudflare (CRITICAL - Do Second)
+
+**Purpose:** Connect your purchased domains to deployments
+
+**DNS Records to Add:**
+
+```dns
+# Production domain
+mx-thegathering.ai
+  CNAME @ <cloudflare-pages-url> (Proxied: ON)
+  CNAME www <cloudflare-pages-url> (Proxied: ON)
+
+# Staging domain
+staging.mx-thegathering.ai
+  CNAME staging <cloudflare-staging-url> (Proxied: ON)
+
+# Development domain
+dev.mx-thegathering.ai
+  CNAME dev <cloudflare-dev-url> (Proxied: ON)
+```
+
+**Actions Required:**
+1. In Cloudflare Pages project settings, go to "Custom domains"
+2. Add custom domain: mx-thegathering.ai
+3. Add custom domain: staging.mx-thegathering.ai
+4. Add custom domain: dev.mx-thegathering.ai
+5. Wait for SSL certificates to provision (5-15 minutes)
+6. Verify HTTPS works for all domains
+
+**Documentation Reference:** docs/domains/HOSTING-SETUP.md (lines 66-99)
+
+---
+
+### 3. Enable Branch Protection Rules (REQUIRED - Do Third)
+
+**Purpose:** Enforce PR workflow and prevent direct pushes to protected branches
+
+**Actions Required:**
+1. Go to GitHub repository settings:
+   https://github.com/Digital-Domain-Technologies-Ltd/MX-Gathering/settings/branches
+2. Add branch protection rule for `main`:
+   - [x] Require a pull request before merging
+   - [x] Require approvals (at least 1)
+   - [x] Require status checks to pass before merging
+     - Select: validate-html, check-links, accessibility, lighthouse
+   - [x] Require branches to be up to date before merging
+   - [x] Include administrators (recommended)
+3. Add branch protection rule for `staging`:
+   - [x] Require a pull request before merging
+   - [x] Require status checks to pass before merging
+     - Select: validate-html, check-links, accessibility, lighthouse
+4. Add branch protection rule for `dev`:
+   - [x] Require status checks to pass before merging
+     - Select: validate-html, check-links, accessibility, lighthouse
+
+**Expected Result:**
+- Direct pushes to main/staging blocked
+- All changes must go through PR review
+- Automated tests must pass before merge
+- History remains clean and auditable
+
+**Documentation Reference:** docs/development/ENVIRONMENTS.md (lines 105-154)
+
+---
+
+### 4. Configure Secondary Domain Redirects (OPTIONAL - Do Later)
+
+**Purpose:** Redirect secondary domains to primary or specific paths
+
+**Options Available:**
+
+**Option A: All domains → Primary (simplest)**
+Redirect everything to mx-thegathering.ai
+
+**Option B: Subdirectory mapping (recommended)**
+- mx-thegathering.net → mx-thegathering.ai/docs
+- mx-thegathering.info → mx-thegathering.ai/learn
+- mx-thegathering.store → mx-thegathering.ai/store
+- mx-thegathering.xyz → mx-thegathering.ai/labs
+
+**Option C: Independent sites**
+Each domain hosts separate content
+
+**Actions Required:**
+1. Decide on redirect strategy
+2. Configure Cloudflare Page Rules (if redirecting)
+3. Add DNS records for secondary domains
+4. Test all redirects
+
+**Documentation Reference:** docs/domains/DOMAIN-STRATEGY.md (lines 191-249)
+
+---
+
+### 5. Test Deployment Pipeline (VERIFICATION - Do Fourth)
+
+**Purpose:** Verify entire workflow works end-to-end
+
+**Test Checklist:**
+
+**A. Test Feature Branch Workflow:**
+```bash
+git checkout dev
+git pull origin dev
+git checkout -b feature/test-deployment
+echo "<p>Test deployment</p>" >> web/index.html
+git add web/index.html
+git commit -m "test: verify deployment pipeline"
+git push origin feature/test-deployment
+```
+- [ ] GitHub Actions PR checks run automatically
+- [ ] Cloudflare creates preview deployment
+- [ ] Preview URL is accessible
+- [ ] HTML validates
+- [ ] Accessibility passes
+- [ ] Performance meets thresholds
+
+**B. Test PR Merge to Dev:**
+- [ ] Create PR from feature/test-deployment to dev
+- [ ] Verify status checks appear in PR
+- [ ] Merge PR after checks pass
+- [ ] Verify dev.mx-thegathering.ai updates
+
+**C. Test Staging Promotion:**
+- [ ] Create PR from dev to staging
+- [ ] Merge after checks pass
+- [ ] Verify staging.mx-thegathering.ai updates
+
+**D. Test Production Deployment:**
+- [ ] Create PR from staging to main
+- [ ] Request review (if required)
+- [ ] Merge after approval and checks
+- [ ] Verify mx-thegathering.ai updates
+
+---
+
+### 6. Configure Monitoring and Alerts (OPTIONAL - Do Later)
+
+**Purpose:** Track uptime, performance, and errors
+
+**Recommended Tools:**
+
+**A. Uptime Monitoring:**
+- Service: UptimeRobot (free tier)
+- URL: https://uptimerobot.com/
+- Monitor: mx-thegathering.ai (5-minute checks)
+- Alert: tom.cranstoun@gmail.com
+
+**B. Performance Monitoring:**
+- Use Cloudflare Web Analytics (free)
+- Enable in Cloudflare dashboard
+- Track Core Web Vitals
+
+**C. Error Tracking:**
+- Review Cloudflare Pages build logs
+- Monitor GitHub Actions workflow runs
+- Check Cloudflare Analytics for 4xx/5xx errors
+
+**Documentation Reference:** docs/domains/HOSTING-SETUP.md (lines 307-332)
+
+---
+
+## Quick Reference Commands
+
+### Check Current Branch
+```bash
+git branch --show-current
+```
+
+### Deploy to Development
+```bash
+git checkout dev
+git pull origin dev
+# Make changes
+git add .
+git commit -m "feat: your change"
+git push origin dev
+# Creates deployment at dev.mx-thegathering.ai
+```
+
+### Create Feature Branch
+```bash
+git checkout dev
+git pull origin dev
+git checkout -b feature/descriptive-name
+# Make changes, commit, push
+git push origin feature/descriptive-name
+# Open PR to dev branch
+```
+
+### Promote Dev → Staging
+```bash
+# Create PR from dev to staging on GitHub
+# After merge, staging.mx-thegathering.ai updates automatically
+```
+
+### Promote Staging → Production
+```bash
+# Create PR from staging to main on GitHub
+# After review and merge, mx-thegathering.ai updates automatically
+```
+
+---
+
+## Verification Checklist
+
+After completing steps 1-3 above, verify:
+
+- [ ] mx-thegathering.ai loads via HTTPS
+- [ ] staging.mx-thegathering.ai loads via HTTPS
+- [ ] dev.mx-thegathering.ai loads via HTTPS
+- [ ] SSL certificates are valid (no browser warnings)
+- [ ] Direct push to main branch is blocked
+- [ ] PR creation triggers automated tests
+- [ ] Landing page passes HTML validation
+- [ ] Landing page passes accessibility audit
+- [ ] Landing page achieves 90+ Lighthouse score
+
+---
+
+## Support and Documentation
+
+**Complete Documentation:**
+- Development workflow: docs/development/ENVIRONMENTS.md
+- Quick start guide: docs/development/QUICKSTART.md
+- Domain strategy: docs/domains/DOMAIN-STRATEGY.md
+- Hosting setup: docs/domains/HOSTING-SETUP.md
+
+**Cloudflare Resources:**
+- Cloudflare Pages Docs: https://developers.cloudflare.com/pages/
+- Custom Domains Guide: https://developers.cloudflare.com/pages/platform/custom-domains/
+- Build Configuration: https://developers.cloudflare.com/pages/platform/build-configuration/
+
+**GitHub Resources:**
+- Branch Protection: https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches
+- GitHub Actions: https://docs.github.com/en/actions
+
+**Contact:**
+- Email: tom.cranstoun@gmail.com
+- Repository Issues: https://github.com/Digital-Domain-Technologies-Ltd/MX-Gathering/issues
+
+---
+
+## Notes
+
+- **Develop in the open:** All changes are public and transparent
+- **Branch strategy:** feature/* → dev → staging → main (production)
+- **Automated testing:** Every PR runs HTML validation, accessibility, performance
+- **Preview deployments:** Every feature branch gets automatic preview URL
+- **No build process:** Plain HTML/CSS/JS deploys directly
+
+---
+
+### AI Assistant Side Notice (24/Jan/2026)
+
+During HTML validation work comparing web pages against Appendix D (AI-Friendly HTML Guide), discovered three patterns implemented in index.html and about.html that were not yet documented in Appendix D:
+
+1. **Heading anchor IDs for deep linking** - H2-H6 elements with id attributes derived from heading text (e.g., `<h2 id="what-is-machine-experience">`)
+2. **External CSS separation** - Inline styles extracted to shared-gathering.css for better caching and maintainability
+3. **Social media card meta tags with accessibility** - twitter:image:alt attributes providing alt text for social media preview images
+
+These patterns are production-ready in the MX-Gathering web pages and should be documented in Appendix D for future reference. Implementation complete; documentation pending.
+
+---
+
+**Last Updated:** 24 January 2026
+**Status:** Ready for Cloudflare configuration
