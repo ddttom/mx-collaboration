@@ -5,8 +5,10 @@ author: Tom Cranstoun
 created: 2026-02-10
 modified: 2026-02-10
 version: "1.0"
-status: proposal
-tags: [electron, editor, collaboration, ai, git, cross-platform]
+
+mx:
+  status: proposal
+  tags: [electron, editor, collaboration, ai, git, cross-platform]
 ---
 
 # PRD: mx-editor — Collaborative Document Editor

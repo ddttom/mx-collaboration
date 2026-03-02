@@ -4,11 +4,13 @@ description: "Implement Accept-Language header detection and automatic redirect 
 author: Tom Cranstoun
 created: 2026-02-22
 modified: 2026-02-22
-status: Ready for Implementation
 version: "1.0"
-priority: high
-category: reginald-features
-tags: [reginald, i18n, language-detection, edge, redirect, seo]
+
+mx:
+  status: Ready for Implementation
+  priority: high
+  category: reginald-features
+  tags: [reginald, i18n, language-detection, edge, redirect, seo]
 ---
 
 # REGINALD Server-Side Language Redirect

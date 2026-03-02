@@ -5,9 +5,11 @@ author: Tom Cranstoun and Maxine
 created: 2026-02-10
 modified: 2026-02-10
 version: "1.0"
-status: draft
-source: BRAINSTORM.md (repo root)
-tags: [brainstorm, ideas, roadmap, recursive-loop, seed, unbuilt]
+
+mx:
+  status: draft
+  source: BRAINSTORM.md (repo root)
+  tags: [brainstorm, ideas, roadmap, recursive-loop, seed, unbuilt]
 ---
 
 # The Idea Garden

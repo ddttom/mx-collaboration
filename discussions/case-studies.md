@@ -2,8 +2,10 @@
 author: "Tom Cranstoun"
 created: "2026-01-24"
 description: "Real-world implementation case studies and lessons learned"
-purpose: "discussion-archive"
-tags: ['machine-experience', 'analysis', 'discussions', 'patterns', 'mx-gathering']
+
+mx:
+  purpose: "discussion-archive"
+  tags: ['machine-experience', 'analysis', 'discussions', 'patterns', 'mx-gathering']
 ---
 
 # Case Studies Archive

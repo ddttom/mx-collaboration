@@ -5,8 +5,10 @@ author: Tom Cranstoun
 created: 2025-12-15
 modified: 2026-02-10
 version: "1.0"
-status: draft
-source: "packages/notes/! More book.md"
+
+mx:
+  status: draft
+  source: "packages/notes/! More book.md"
 ---
 
 # MX-Card Scenarios

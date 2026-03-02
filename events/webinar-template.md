@@ -2,8 +2,10 @@
 author: "Tom Cranstoun"
 created: "2026-01-24"
 description: "Template for organizing online MX webinars"
-purpose: "template"
-tags: ['machine-experience', 'community', 'organization', 'template', 'mx-gathering', 'events']
+
+mx:
+  purpose: "template"
+  tags: ['machine-experience', 'community', 'organization', 'template', 'mx-gathering', 'events']
 ---
 
 # Webinar Template: [Webinar Title]

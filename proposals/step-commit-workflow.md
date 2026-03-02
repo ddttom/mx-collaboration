@@ -5,8 +5,10 @@ author: Tom Cranstoun
 created: 2025-12-15
 modified: 2026-02-10
 version: "1.0"
-status: proposal
-source: packages/notes/Vibe coding commit step.md
+
+mx:
+  status: proposal
+  source: packages/notes/Vibe coding commit step.md
 ---
 
 # Git Workflow - Step Commit Process

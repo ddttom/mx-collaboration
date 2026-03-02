@@ -2,8 +2,10 @@
 author: "Tom Cranstoun"
 created: "2026-01-24"
 description: "Common issues and solutions for MX implementations"
-purpose: "member-support"
-tags: ['machine-experience', 'members', 'resources', 'support', 'mx-gathering']
+
+mx:
+  purpose: "member-support"
+  tags: ['machine-experience', 'members', 'resources', 'support', 'mx-gathering']
 ---
 
 # Troubleshooting Guide

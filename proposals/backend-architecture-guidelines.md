@@ -5,8 +5,10 @@ author: Tom Cranstoun
 created: 2025-12-15
 modified: 2026-02-11
 version: 1.0
-status: proposal
-source: packages/notes/Vibe coding backend.md
+
+mx:
+  status: proposal
+  source: packages/notes/Vibe coding backend.md
 ---
 
 # Backend Architecture Guidelines

@@ -4,8 +4,10 @@ description: "Add mobile hamburger menu and componentize hero/nav for cogify tem
 author: Tom Cranstoun
 created: 2026-02-22
 modified: 2026-02-22
-status: Ready for Implementation
 version: "1.0"
+
+mx:
+  status: Ready for Implementation
 ---
 
 # Cogify Hamburger Component Proposal
