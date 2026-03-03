@@ -3,11 +3,11 @@ title: "REGINALD Server-Side Language Redirect"
 description: "Implement Accept-Language header detection and automatic redirect at the REGINALD edge layer"
 author: Tom Cranstoun
 created: 2026-02-22
-modified: 2026-02-22
-version: "1.0"
+modified: 2026-03-03
+version: "1.1"
 
 mx:
-  status: Ready for Implementation
+  status: Phase 1 Complete
   priority: high
   category: reginald-features
   tags: [reginald, i18n, language-detection, edge, redirect, seo]
@@ -313,10 +313,10 @@ async function injectHreflang(response, siteConfig) {
 
 ### Phase 1: Core Redirect (MVP)
 
-- [ ] Cloudflare Worker for Accept-Language detection
-- [ ] Basic redirect logic (root path only)
-- [ ] REGINALD config file parsing
-- [ ] Client-side fallback template
+- [x] Cloudflare Worker for Accept-Language detection *(implemented in cloudflare-worker.js v1.2.0)*
+- [x] Basic redirect logic (root path only) *(302 redirect with cascading language match)*
+- [x] REGINALD config file parsing *(language-config.json at /reginald/api/v1/)*
+- [x] Client-side fallback template *(Salva demo index.html already serves as fallback)*
 
 ### Phase 2: hreflang Injection
 
@@ -410,15 +410,15 @@ The Salva demo has been updated to demonstrate the client-side fallback for this
 
 **Pending (REGINALD edge):**
 
-- [ ] Cloudflare Worker redirect
+- [x] Cloudflare Worker redirect *(implemented 2026-03-03, v1.2.0)*
 - [ ] hreflang injection at edge
-- [ ] REGINALD config file parsing
+- [x] REGINALD config file parsing *(language-config.json, cached at edge)*
 
 ## Next Steps
 
-1. Review and approve this proposal
+1. ~~Review and approve this proposal~~ ✅
 2. Create REGINALD site config schema
-3. Implement Cloudflare Worker MVP
+3. ~~Implement Cloudflare Worker MVP~~ ✅ (v1.2.0, 2026-03-03)
 4. Test with Salva demo (client-side reference available)
 5. Document in cogify-this.cog.md ✅ (completed)
 6. Deploy to REGINALD staging
