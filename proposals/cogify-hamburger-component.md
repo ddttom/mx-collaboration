@@ -155,7 +155,7 @@ function closeOnEscape(e) {
 | `packages/allaboutv2/mx/demo/salva/es/index.cog.css` | Add drawer styles |
 | `packages/allaboutv2/mx/demo/salva/en/index.cog.css` | Add drawer styles |
 | `hub-content/mx-reference-implementations/_templates/single-language-business-template.cog.html` | Add hamburger pattern |
-| `hub-content/mx-canon/MX-Cog-Registry/cogs/cogify-this.cog.md` | Document EDS vs standalone approach |
+| `hub-content/scripts/cogs/cogify-this.cog.md` | Document EDS vs standalone approach |
 
 ## Constraints
 
