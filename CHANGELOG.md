@@ -36,7 +36,7 @@ All notable changes to this repository are documented in this file.
 ### Changed
 
 - **CLAUDE.md** — Replaced placeholder with full MX-aware configuration (v2.0)
-- **README.md** — Fixed stale link from mx-principles.md to PRINCIPLES.md
+- **README.md** — Fixed stale link from mx-principles.md to principles.cog.md
 
 ### Migrated from packages/notes
 

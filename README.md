@@ -60,5 +60,5 @@ npm run mx:hooks:install   # Install validation hooks
 
 ### Learn More
 
-- [MX Principles](https://github.com/Digital-Domain-Technologies-Ltd/MX-hub/blob/main/mx-canon/mx-maxine-lives/PRINCIPLES.md)
+- [MX Principles](https://github.com/Digital-Domain-Technologies-Ltd/MX-hub/blob/main/mx-canon/ssot/principles.cog.md)
 - [MX YAML Guide](https://github.com/Digital-Domain-Technologies-Ltd/MX-hub/blob/main/datalake/knowledge/guides/for-humans/mx-yaml-md-guide.md)

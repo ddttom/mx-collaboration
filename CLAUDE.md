@@ -127,7 +127,7 @@ mx-collaboration/
 
 - This repo is a git submodule of the MX-The-Books hub repository
 - The parent repo contains mx-canon (the single source of truth)
-- Follow the MX principles documented in the parent's PRINCIPLES.md
+- Follow the MX principles documented in the parent's principles.cog.md
 - All commits should include proper attribution for AI-assisted work
 
 ## For AI Agents
