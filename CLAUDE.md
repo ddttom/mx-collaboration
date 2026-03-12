@@ -22,7 +22,7 @@ This file provides guidance to AI assistants when working in this repository.
 
 ## Repository Purpose
 
-MX Collaboration is the team workspace for Cog-Nova-MX Ltd. It tracks documents through a structured pipeline from raw ideas to published content. This is where humans work before content becomes canonical.
+MX Collaboration is the team workspace for CogNovaMX Ltd. It tracks documents through a structured pipeline from raw ideas to published content. This is where humans work before content becomes canonical.
 
 ## Document Pipeline
 

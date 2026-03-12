@@ -157,7 +157,7 @@ The Gathering has no online presence. No website, no GitHub org, no community fo
 **Status:** seed
 **Feeds:** Gathering → Company
 
-No one outside Cog-Nova-MX has created a cog. The format is documented, the spec is MIT licensed, but adoption is zero. The first external adopter validates the entire model. Who could it be? A Boye & Company member? A CMS vendor? An AI agent framework?
+No one outside CogNovaMX has created a cog. The format is documented, the spec is MIT licensed, but adoption is zero. The first external adopter validates the entire model. Who could it be? A Boye & Company member? A CMS vendor? An AI agent framework?
 
 ---
 
@@ -264,7 +264,7 @@ Partners need a way to adopt MX without reading the entire book. An SDK or onboa
 **Status:** seed
 **Feeds:** Company
 
-Tom's MX salary is £0. The company needs revenue. What is the service model? Consulting (audits + implementation)? Licensing (hosted registry)? Training (certification)? A pricing model forces clarity on what Cog-Nova-MX actually sells.
+Tom's MX salary is £0. The company needs revenue. What is the service model? Consulting (audits + implementation)? Licensing (hosted registry)? Training (certification)? A pricing model forces clarity on what CogNovaMX actually sells.
 
 ---
 
@@ -282,7 +282,7 @@ The pitch deck is a PowerPoint. What if the investment narrative were a cog? YAM
 **Status:** sprouting
 **Feeds:** Company → Book
 
-allabout.network is Tom's publishing platform. It needs a dedicated MX section — landing page, blog posts, the explaining-MX-OS article, case studies. The section IS the public face of Cog-Nova-MX. It must exist before the CMS Summit.
+allabout.network is Tom's publishing platform. It needs a dedicated MX section — landing page, blog posts, the explaining-MX-OS article, case studies. The section IS the public face of CogNovaMX. It must exist before the CMS Summit.
 
 ---
 

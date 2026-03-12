@@ -21,7 +21,7 @@ mx:
 
 ## Background
 
-The mx-collaboration repository provides a structured document pipeline (incoming → proposals → accepted → published) for Cog-Nova-MX Ltd. Staff contribute documents with YAML frontmatter, following naming conventions and templates. Currently, this workflow requires git command-line knowledge, a text editor, and familiarity with the MX conventions.
+The mx-collaboration repository provides a structured document pipeline (incoming → proposals → accepted → published) for CogNovaMX Ltd. Staff contribute documents with YAML frontmatter, following naming conventions and templates. Currently, this workflow requires git command-line knowledge, a text editor, and familiarity with the MX conventions.
 
 This creates friction. Not every team member is comfortable with git, markdown, or terminal workflows. Documents end up in random locations, frontmatter is missing or malformed, branch discipline breaks down, and Tom must manually chase contributions.
 
