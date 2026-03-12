@@ -173,7 +173,7 @@ Curated list of tools, frameworks, and resources for implementing Machine Experi
 - ~78,000 words
 - Available: Q1 2026
 
-**MX-Handbook:**
+**MX: The Handbook:**
 
 - Practical implementation guide
 - 11 chapters

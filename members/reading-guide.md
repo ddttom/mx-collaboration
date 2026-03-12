@@ -1,7 +1,7 @@
 ---
 author: "Tom Cranstoun"
 created: "2026-01-24"
-description: "Guided reading path for MX-Bible and MX-Handbook"
+description: "Guided reading path for MX-Bible and MX: The Handbook"
 
 mx:
   purpose: "member-support"
@@ -20,7 +20,7 @@ Your personalized path through Machine Experience (MX) content based on your rol
 
 **Recommended Reading Order:**
 
-1. **Start:** MX-Handbook (practical implementation guide)
+1. **Start:** MX: The Handbook (practical implementation guide)
 2. **Reference:** Appendices for specific patterns
 3. **Deep Dive:** MX-Bible for comprehensive understanding
 4. **Practice:** Code examples repository
@@ -135,7 +135,7 @@ Need immediate improvements?
 Comprehensive transformation?
 
 1. Full MX-Bible read
-2. Complete MX-Handbook study
+2. Complete MX: The Handbook study
 3. Review all appendices
 4. Study code examples
 5. Full site audit and remediation

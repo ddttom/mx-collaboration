@@ -32,5 +32,5 @@ mx:
 ## Resources
 
 - MX-Bible
-- MX-Handbook
+- MX: The Handbook
 - Web Audit Suite
