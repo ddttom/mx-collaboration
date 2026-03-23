@@ -26,7 +26,7 @@ Curated list of tools, frameworks, and resources for implementing Machine Experi
 - Pattern extraction
 - Regression detection
 
-**Link:** [Web Audit Suite Repository](https://github.com/Digital-Domain-Technologies-Ltd/invisible-users/tree/main/packages/web-audit-suite)
+**Link:** [Web Audit Suite Repository](https://github.com/Digital-Domain-Technologies-Ltd/mx-handbook/tree/main/packages/web-audit-suite)
 
 **Use for:** Complete site audits, baseline assessment, tracking improvements
 
