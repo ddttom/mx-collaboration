@@ -223,7 +223,7 @@ Track these metrics before and after implementation:
 - **Questions:** GitHub Discussions
 - **Issues:** GitHub Issues
 - **Complex problems:** [troubleshooting.md](troubleshooting.md) ("Troubleshooting Guide" at <https://github.com/Digital-Domain-Technologies-Ltd/MX-Gathering/blob/main/members/troubleshooting.md>)
-- **Email:** <tom.cranstoun@gmail.com>
+- **Email:** <info@allabout.network>
 
 ## Next Steps
 

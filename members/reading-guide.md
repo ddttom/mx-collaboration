@@ -173,7 +173,7 @@ Comprehensive transformation?
 ## Questions?
 
 - Join GitHub Discussions
-- Email: <tom.cranstoun@gmail.com>
+- Email: <info@allabout.network>
 - Attend community events
 
 ---

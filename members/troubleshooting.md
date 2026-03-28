@@ -301,7 +301,7 @@ Include:
 - **GitHub Discussions:** General questions
 - **GitHub Issues:** Bugs and feature requests
 - **Community Events:** Live troubleshooting
-- **Email:** <tom.cranstoun@gmail.com>
+- **Email:** <info@allabout.network>
 
 ## Contributing
 
