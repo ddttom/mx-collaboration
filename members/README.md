@@ -72,7 +72,7 @@ Curated list of helpful tools and resources.
 - **GitHub Discussions:** Ask questions, share experiences
 - **Issue Tracker:** Report bugs or request features
 - **Community Events:** Attend meetups and workshops
-- **Email:** <info@allabout.network>
+- **Email:** <info@cognovamx.com>
 
 ### Contribute Back
 

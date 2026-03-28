@@ -173,7 +173,7 @@ Comprehensive transformation?
 ## Questions?
 
 - Join GitHub Discussions
-- Email: <info@allabout.network>
+- Email: <info@cognovamx.com>
 - Attend community events
 
 ---
