@@ -387,7 +387,7 @@ async function injectHreflang(response, siteConfig) {
 
 The Salva demo has been updated to demonstrate the client-side fallback for this proposal:
 
-**Location:** `packages/allaboutv2/mx/demo/salva/`
+**Location:** `packages/allaboutv2/demo/salva/`
 
 **Key files:**
 
