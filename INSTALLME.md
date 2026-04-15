@@ -22,7 +22,7 @@ mx:
         minimum: "20"
         why: "MX metadata validation scripts (if running from parent repo)"
 
-  install-steps:
+  installSteps:
     - step: 1
       name: Clone or init submodule
       command: "git submodule update --init packages/mx-collaboration"
@@ -54,7 +54,7 @@ mx:
       - "All five pipeline directories exist"
       - "SOUL.md, CLAUDE.md, CONTRIBUTING.md, and CHANGELOG.md are present"
 
-  mx-environment:
+  mxEnvironment:
     detection: "test -d ~/.mx && echo 'MX environment detected'"
     context-file: "~/.mx/repos.yaml"
     role: collaboration
