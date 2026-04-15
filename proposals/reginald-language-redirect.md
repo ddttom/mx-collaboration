@@ -7,7 +7,8 @@ modified: 2026-03-03
 version: "1.1"
 
 mx:
-  status: Phase 1 Complete
+  status: active
+  statusNote: "Phase 1 Complete"
   priority: high
   category: reginald-features
   tags: [reginald, i18n, language-detection, edge, redirect, seo]

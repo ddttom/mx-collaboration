@@ -7,7 +7,8 @@ modified: 2026-02-22
 version: "1.0"
 
 mx:
-  status: Ready for Implementation
+  status: active
+  statusNote: "Ready for Implementation"
 ---
 
 # Cogify Hamburger Component Proposal
