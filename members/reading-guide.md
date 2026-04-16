@@ -3,6 +3,7 @@ author: "Tom Cranstoun"
 created: "2026-01-24"
 description: "Guided reading path for MX-Bible and MX: The Handbook"
 
+title: Reading Guide
 mx:
   purpose: "member-support"
   tags: ['machine-experience', 'members', 'resources', 'support', 'mx-gathering']

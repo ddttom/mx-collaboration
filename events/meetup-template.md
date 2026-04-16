@@ -3,6 +3,7 @@ author: "Tom Cranstoun"
 created: "2026-01-24"
 description: "Template for organizing local MX community meetups"
 
+title: 'Meetup Template: [Event Name]'
 mx:
   purpose: "template"
   tags: ['machine-experience', 'community', 'organization', 'template', 'mx-gathering', 'events']

@@ -3,6 +3,7 @@ author: "Tom Cranstoun"
 created: "2026-01-24"
 description: "Discussion archive for MX implementation patterns"
 
+title: Implementation Patterns Discussion Archive
 mx:
   purpose: "discussion-archive"
   tags: ['machine-experience', 'analysis', 'discussions', 'patterns', 'mx-gathering']

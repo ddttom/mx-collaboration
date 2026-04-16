@@ -3,6 +3,7 @@ author: "Tom Cranstoun"
 created: "2026-01-24"
 description: "Step-by-step checklist for implementing MX patterns"
 
+title: Implementation Checklist
 mx:
   purpose: "member-support"
   tags: ['machine-experience', 'members', 'resources', 'support', 'mx-gathering']

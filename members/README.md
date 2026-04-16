@@ -3,6 +3,7 @@ author: "Tom Cranstoun"
 created: "2026-01-24"
 description: "Member support resources and getting started guide"
 
+title: Member Resources
 mx:
   purpose: "documentation"
   tags: [members, support, resources, getting-started, implementation, troubleshooting]

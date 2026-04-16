@@ -3,6 +3,7 @@ author: "Tom Cranstoun"
 created: "2026-01-24"
 description: "Community feedback on MX tools and resources"
 
+title: Tool Feedback Archive
 mx:
   purpose: "discussion-archive"
   tags: ['machine-experience', 'analysis', 'discussions', 'patterns', 'mx-gathering']
