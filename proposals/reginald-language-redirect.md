@@ -9,8 +9,8 @@ version: "1.1"
 mx:
   status: active
   statusNote: "Phase 1 Complete"
-  priority: high
-  category: reginald-features
+  x-mx-priority: high
+  x-mx-category: reginald-features
   tags: [reginald, i18n, language-detection, edge, redirect, seo]
 ---
 
