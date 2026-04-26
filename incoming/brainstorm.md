@@ -1,7 +1,7 @@
 ---
 title: "The Idea Garden"
 description: "Unbuilt features, unwritten content, and unexplored opportunities in the MX recursive loop"
-author: Tom Cranstoun and Maxine
+author: Tom Cranstoun
 created: 2026-02-10
 modified: 2026-02-10
 version: "1.0"
